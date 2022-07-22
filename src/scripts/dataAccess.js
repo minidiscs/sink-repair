@@ -29,7 +29,6 @@ export const sendRequest = (userServiceRequest) => {
         body: JSON.stringify(userServiceRequest)
     }
 
-
     return fetch(`${API}/serviceRequests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
