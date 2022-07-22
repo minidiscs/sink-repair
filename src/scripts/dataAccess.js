@@ -32,6 +32,14 @@ export const sendRequest = (userServiceRequest) => {
     return fetch(`${API}/serviceRequests`, fetchOptions)
         .then(response => response.json())
         .then(() => {
-
+			document.dispatchEvent(new CustomEvent("stateChanged"))
         })
+}
+
+export const deleteRequest = (id) => {
+
+    return fetch(`${API}/serviceRequests/${id}`, { method: "DELETE" })
+        .then(() => {
+                document.dispatchEvent(new CustomEvent("stateChanged"))
+            })
 }
