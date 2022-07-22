@@ -2,7 +2,7 @@ import { getRequests } from "./dataAccess.js"
 
 const requestsHTML = (request) => {
     return `
-        <li id="request-${request.id}">
+        <li id="request--${request.id}">
             <div class="requests--title">
                 Request - ${request.id}: ${request.address}
             </div>
@@ -15,6 +15,12 @@ const requestsHTML = (request) => {
         </li>
         <li>
             Needed By: ${request.neededBy}
+        </li>
+        <li>
+            <button class="request__delete"
+                    id="request--${request.id}">
+                Delete
+            </button>
         </li>
         <br>
        `
