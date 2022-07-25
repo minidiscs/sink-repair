@@ -5,13 +5,13 @@ const applicationState = {
 
 const API = "http://localhost:8088"
 
-export const fetchRequests = () => {
-    return fetch(`${API}/serviceRequests`)
+export const fetchData = (endpoint) => {
+    return fetch(`${API}/${endpoint}`)
         .then(response => response.json())
         .then(
-            (serviceRequests) => {
+            (data) => {
                 // Store the external state in application state
-                applicationState.serviceRequests = serviceRequests
+                applicationState[endpoint] = data
             }
         )
 }

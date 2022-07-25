@@ -1,5 +1,18 @@
 {
-  "plumbers": [],
+  "plumbers": [
+    {
+      "id": 1,
+      "name": "Hugo Sellers"
+    },
+    {
+      "id": 2,
+      "name": "Pete Higgs"
+    },
+    {
+      "id": 3,
+      "name": "Janet Forsyth"
+    }
+  ],
   "completions": [],
   "serviceRequests": [
     {
